@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Room</title>
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../public/css/toast.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 style="position: absolute;top:10%;left:45%;">Welcome</h1>
+
+            <form class="form" action="/user/login" method="post" enctype='application/json'>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" id="login-button">Sign In</button>
+                <br><br><br>
+                <h2>Not registered yet !!</h2>
+                <br>
+                <a class="register-btn" href="/user/register" style="position: relative;">Register</a>
+            </form>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>$("#login-button").click(function (event) {
+            event.preventDefault();
+            $('form').fadeOut(500);
+            window.localStorage.setItem('username', $("input[name=username]").val());
+            $('.wrapper').addClass('form-success');
+            $('form').submit();
+            $.toast({
+                heading: 'Success',
+                text: 'Succesfully registered!!',
+                showHideTransition: 'slide',
+                icon: 'success'
+            });
+        });
+    </script>
+    <script src="../public/js/toast.js"></script>
+
+
+</body>
+
+</html>

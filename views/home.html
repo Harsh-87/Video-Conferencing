@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../public/css/toast.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2 style="font-family:sans-serif;">Dashboard</h2>
+            <a class="register-btn" href="/user/logout" style="position: absolute;top:10%;right:10%;z-index: 2;">Logout</a>
+            <br><br>
+            <form class="form" action="/" method="post" style="position: relative;top:0%;left:0%;">
+                <input id="room" type="text" name="roomname" placeholder="Room Name" required>
+                <br><br>
+                <button type="submit" id="join-button">Join Meeting</button>
+                <button type="submit" id="create-button">Create Meeting</button>
+            </form>
+
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $("#join-button").click(function (event) {
+            if($('#room').val()===""){ return;}
+            event.preventDefault();
+            $('form').append('<input type="hidden" name="choice" value="join">');
+            $('form').fadeOut(500);
+            window.localStorage.setItem('roomname', $("input[name=roomname]").val());
+            $('.wrapper').addClass('form-success');
+            $('form').submit();
+            $.toast({
+                heading: 'Success',
+                text: 'Succesfully registered!!',
+                showHideTransition: 'slide',
+                icon: 'success'
+            });
+        });
+        $("#create-button").click(function (event) {
+            if($('#room').val()===""){return;}
+            event.preventDefault();
+            $('form').append('<input type="hidden" name="choice" value="create">');
+            $('form').fadeOut(500);
+            window.localStorage.setItem('roomname', $("input[name=roomname]").val());
+            $('.wrapper').addClass('form-success');
+            $('form').submit();
+            $.toast({
+                heading: 'Success',
+                text: 'Succesfully registered!!',
+                showHideTransition: 'slide',
+                icon: 'success'
+            });
+        });
+    </script>
+    <script src="../public/js/toast.js"></script>
+</body>
+
+</html>

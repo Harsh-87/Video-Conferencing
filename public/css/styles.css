@@ -1,0 +1,87 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+video {
+  background-color: black;
+  height:100%;
+  width:100%;
+  position: relative;
+  object-fit: cover;
+}
+table{
+  width: 100%;
+  height:70%;
+}
+
+body {
+  background-color:grey;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  height:5%;
+  width:100%;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+}
+
+.box button{
+  width: 10%;
+  height:70%;
+  border-radius: 15%;
+  margin: 5px;
+}
+
+.call-btn{
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+}
+
+.call {
+  transition: all 0.4s ease 0s;
+  margin: auto;
+  border-width: 2px;
+  color:white!important;
+  font-family: sans-serif;
+  background: transparent;
+  font-size: medium;
+  padding: 15px;
+  border-radius: 15%;
+}
+
+.call:hover:enabled {
+  color: #ffffff !important;
+  background: yellowgreen;
+  transition: all 0.4s ease 0s; 
+}
+
+.endcall {
+  transition: all 0.4s ease 0s;
+  margin: auto;
+  border-width: 2px;
+  color:white!important;
+  font-family: sans-serif;
+  background: transparent;
+  font-size: medium;
+  padding: 15px;
+  border-radius: 15%;
+}
+
+.endcall:hover:enabled {
+  color: #ffffff !important;
+  background: orangered;
+  transition: all 0.4s ease 0s;
+}
+
+.videos{
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}

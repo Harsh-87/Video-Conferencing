@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viewer</title>
+    <meta charset="UTF-8" />
+    <link href="../public/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/css/login.css">
+    <link rel="stylesheet" href="../public/css/toast.css">
+  </head>
+  <body>
+    <div class="wrapper" style="overflow-y: scroll;">
+      <br><br>
+      <h1 style="text-align: center;">Video Conferencing</h1>
+      <br><br>
+      <div style="width: 100%;text-align: center;z-index: 2;">
+        <table>
+          <tr style="height:10%;text-align: center;">
+            <td>Local Video</td>
+            <td>Host</td>
+          </tr>
+          <tr style="height:90%;text-align: center;padding:5%;">
+            <td><video id="localVideo" style="padding:5%;"  playsinline autoplay muted></video></td>
+            <td><video id="remoteVideo" style="padding:5%;" playsinline autoplay></video></td>
+          </tr>
+        </table>
+        <br><br>
+        <div class="call-btn">
+          <button class="call" id="showme">Show my video</button>
+          <button class="endcall" id="hideme">Hide my Video</button>
+          <button class="endcall"  id="endButton">End Call</button>
+        </div>
+      </div>
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../public/js/watch.js"></script>
+    <script src="../public/js/toast.js"></script>
+  </body>
+</html>
