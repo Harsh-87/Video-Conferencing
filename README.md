@@ -9,10 +9,10 @@ A WebRTC based peer to peer video calling web application. It makes use of socke
 ##
 
 ### Login page
-<img width="1000" position="relative" src="snapshots/login.png" /> 
+<img width="1000" position="relative" src="snapshot/login.png" /> 
 
 ### Home page
-<img width="1000" src="snapshots/call.png" /> 
+<img width="1000" src="snapshot/call.png" /> 
 
 ### Made By
  Harsh Kothari
