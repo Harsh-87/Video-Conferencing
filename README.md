@@ -1,5 +1,5 @@
 # Video Conferencing
-A WebRTC based peer to peer video calling web application. It makes use of sockets for signalling.
+A WebRTC based peer to peer video calling web application which makes use of sockets for signalling.
 ##
 ### Key features
  - **Secure** **Authentication** using Passport.js Local Strategy.
